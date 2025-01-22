@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ja/7F9nGm6U=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\unluy\\source\\repos\\DDD_Project\\DDD_Project.API\\DDD_Project.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\unluy\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "C:\\Users\\unluy\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
