@@ -33,6 +33,24 @@ namespace DDD_Project.Domain.Aggregates.TaskAggregate
             Labels = new List<TaskLabel>();
         }
 
+        public void Update(string title, string description, TaskPriority priority, 
+            DDD_Project.Domain.Enums.TaskStatus status, DateTime dueDate, Guid assignedToId)
+        {
+            Title = title ?? throw new ArgumentNullException(nameof(title));
+            Description = description;
+            Priority = priority;
+            
+            if (Status != status)
+            {
+                var oldStatus = Status;
+                Status = status;
+                _domainEvents.Add(new TaskStatusChangedEvent(Id, oldStatus, status));
+            }
+            
+            DueDate = dueDate;
+            AssignedToId = assignedToId;
+        }
+
         public void UpdateStatus(DDD_Project.Domain.Enums.TaskStatus newStatus)
         {
             var oldStatus = Status;
