@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "DDD_Project.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DDD_Project.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DDD_Project.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DDD_Project.Application.dll": {}
+        }
+      },
+      "DDD_Project.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/DDD_Project.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DDD_Project.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DDD_Project.Application/1.0.0": {
+      "type": "project",
+      "path": "../DDD_Project.Application/DDD_Project.Application.csproj",
+      "msbuildProject": "../DDD_Project.Application/DDD_Project.Application.csproj"
+    },
+    "DDD_Project.Domain/1.0.0": {
+      "type": "project",
+      "path": "../DDD_Project.Domain/DDD_Project.Domain.csproj",
+      "msbuildProject": "../DDD_Project.Domain/DDD_Project.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "DDD_Project.Application >= 1.0.0",
+      "DDD_Project.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\unluy\\.nuget\\packages\\": {},
@@ -38,7 +76,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\unluy\\source\\repos\\DDD_Project\\DDD_Project.Application\\DDD_Project.Application.csproj": {
+              "projectPath": "C:\\Users\\unluy\\source\\repos\\DDD_Project\\DDD_Project.Application\\DDD_Project.Application.csproj"
+            },
+            "C:\\Users\\unluy\\source\\repos\\DDD_Project\\DDD_Project.Domain\\DDD_Project.Domain.csproj": {
+              "projectPath": "C:\\Users\\unluy\\source\\repos\\DDD_Project\\DDD_Project.Domain\\DDD_Project.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
